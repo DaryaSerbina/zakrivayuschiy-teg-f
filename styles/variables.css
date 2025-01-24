@@ -1,1 +1,47 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --font-family: "Inter-Variable";
+  --accent-font-family: "PressStart2P-Regular";
+  --font-weight: 400;
+  --title-font-weight: 700;
+  --text-color: rgb(0, 0, 0);
+  --contour-color: rgb(0, 0, 0);
+  --fill-color: rgb(255, 0, 0);
+  --icon-color-active: rgb(255, 0, 0);
+  --icon-color-inactive: rgb(0, 0, 0);
+  --bg-color: rgb(255, 255, 255);
+  --bg-image: repeating-linear-gradient(
+      to right,
+      rgb(211, 211, 211) 0px 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgb(211, 211, 211) 0px 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(to bottom, rgb(231, 231, 231) 0.01%, rgb(26, 26, 26) 100%);
+  --box-shadow-color: rgb(0, 0, 0);
+  --text-shadow-color: rgba(0, 0, 0, 0.25);
+  --button-text-color: rgb(255, 255, 255);
+  --backdrop-color: rgb(0 0 0 / 0.75);
+  --text-stroke-color: rgb(255, 255, 255);
+  --font-size-large: 1.125rem;
+  --font-size-small: 0.875rem;
+  --header-inline-size: clamp(23.438rem, 16.2845rem + 30.5217vw, 43.754rem);
+  --header-margin: 6.25rem clamp(0rem, -8.1426rem + 34.7418vw, 23.125rem);
+  --header-padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem)
+    clamp(0.875rem, -1.4687rem + 9.9996vw, 7.531rem);
+  --header-title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --header-subtitle-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --card-inline-size: clamp(23.438rem, 16.3739rem + 30.1401vw, 43.5rem);
+  --card-heading-padding: clamp(0.38rem, -0.178vw + 0.447rem, 0.19rem)
+    clamp(0.75rem, -0.117vw + 0.794rem, 0.625rem)
+    clamp(0.38rem, -0.178vw + 0.447rem, 0.19rem) 0.625rem;
+  --dialog-inline-size: clamp(21.313rem, 21.0489rem + 1.1268vw, 22.063rem);
+  --main-button-margin: 0 0 6.25rem;
+  --main-button-inline-size: clamp(19.125rem, 18.0465rem + 4.6017vw, 22.188rem);
+  --main-button-block-size: calc(
+    8.688rem - clamp(3.438rem, 2.8rem + 2.7223vw, 5.25rem)
+  );
+}
