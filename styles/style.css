@@ -18,6 +18,7 @@
   background-image: var(--bg-image);
   background-color: var(--bg-color);
   background-size: cover;
+  background-attachment: fixed;
   font-size: var(--font-size-large);
   display: flex;
   align-items: center;
@@ -37,7 +38,7 @@
   flex-wrap: wrap;
   margin: var(--header-margin);
   padding: var(--header-padding);
-  font-family: var(--accent-font-family), sans-serif;
+  font-family: var(--accent-font-family), fantasy;
   gap: 1.25rem;
 }
 
@@ -60,20 +61,24 @@
 .card {
   inline-size: var(--card-inline-size);
   max-block-size: 100%;
-  border: 2px solid currentColor;
+  outline: 2px solid currentColor;
   background-color: var(--bg-color);
 }
 
 .card__heading {
   font-variation-settings: "wght" var(--title-font-weight);
   font-size: var(--font-size-large);
+  inline-size: var(--card-heading-inline-size);
+  max-block-size: var(--card-heading-block-size);
   padding: var(--card-heading-padding);
-  border: 2px solid currentColor;
+  display: flex;
+  align-items: center;
 }
 
 .card__container-image {
   position: relative;
-  border: 2px solid currentColor;
+  border-block-start: 2px solid currentColor;
+  border-block-end: 2px solid currentColor;
 }
 
 .card__container-paragraph {
@@ -81,7 +86,6 @@
   padding: 1.6rem;
   gap: 1.6rem;
   flex-direction: column;
-  border: 2px solid currentColor;
   inline-size: 100%;
   max-block-size: 100%;
 }
@@ -102,7 +106,7 @@
   text-shadow: 0 4px 4px var(--text-shadow-color);
   opacity: 0.5;
   font-size: var(--font-size-small);
-  font-family: var(--accent-font-family), sans-serif;
+  font-family: var(--accent-font-family), fantasy;
 }
 
 .card__image {
@@ -111,7 +115,6 @@
   block-size: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border: 2px solid currentColor;
 }
 
 .sparks {
@@ -144,7 +147,7 @@
 }
 
 .dialog__text {
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), fantasy;
   text-transform: uppercase;
   font-size: 0.875rem;
   line-height: 150%;
@@ -163,11 +166,12 @@
 
 .button {
   border: 2px solid currentColor;
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), fantasy;
   background: var(--bg-color);
   cursor: pointer;
   font-size: var(--font-size-small);
   position: relative;
+  transition: box-shadow 0.3s ease;
 }
 
 .card__icon-button {
@@ -191,7 +195,7 @@
 }
 
 .button__text {
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), fantasy;
   font-size: var(--font-size-small);
   position: relative;
   z-index: 1;
@@ -213,6 +217,7 @@
   margin: var(--main-button-margin);
   inline-size: clamp(19.125rem, 18.4866rem + 2.7238vw, 20.938rem);
   block-size: var(--main-button-block-size);
+  white-space: nowrap;
 }
 
 .button:focus {
@@ -221,7 +226,6 @@
 
 .button:not(.card__icon-button):focus-visible {
   box-shadow: 2px 2px 0 0 var(--box-shadow-color);
-  transition: box-shadow 0.3s ease;
 }
 
 .button:not(.card__icon-button)::before {
@@ -287,29 +291,9 @@
   transition: fill 0.3s linear 0.06s;
 }
 
-@keyframes heart-scale {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(1.25);
-  }
-}
-
 .like-icon.is-liked .heart {
   animation: heart-scale 0.3s ease-in 0.16s;
   transform-origin: center;
-}
-
-@keyframes sparks-opacity {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 .like-icon.is-liked .sparks {
